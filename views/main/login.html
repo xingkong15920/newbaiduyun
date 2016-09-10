@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/public/css/login.css"/>
+		<link rel="stylesheet" type="text/css" href="/public/css/reset.css" />
+		<script src="/public/js/login.js"></script>
+		<script src="/public/js/jquery.min.js"></script>
+	</head>
+	<body>
+		<!--头部-->
+		<header class="login_head">
+			<!--左边logo-->
+			<div class="login_head_mid clearfix">
+				<h1 class="fl">
+					<a href="">
+						<img src="/public/img/baidu.gif"/>
+					</a>
+				</h1>
+				<!--已注册点击-->
+				<div class="login_go fr">
+					我已注册，现在就
+					<input type="button"value="登陆" id="login_go"/>
+				</div>
+			</div>
+		</header>
+		<!--导航线-->
+		<div class="nav_line">
+			<div class="nav_line_mid"></div>
+		</div>
+		<!--注册框-->
+		<div class="reg_big">
+			<ul class="reg_box clearfix" id="reg_box">
+				<li class="reg_box_item fl">
+					<label for="reg_user">用户名</label>
+					<input type="text" id="reg_user" placeholder="请设置用户名"/>
+					<span id="text_message"></span>
+				</li>
+				<li class="reg_box_item fl">
+					<label for="reg_pass">密码</label>
+					<input type="password" id="reg_pass" placeholder="请输入密码"/>
+				</li>
+				<li class="reg_box_item fl">
+					<label for="reg_repass">重复密码</label>
+					<input type="password" id="reg_repass" placeholder="请再次输入密码"/>
+				</li>
+				<li class="reg_box_item fl">
+					<input type="submit" value="注册" id="reg_sub" />
+					<span id="pass_message"></span>
+				</li>
+			</ul>
+		</div>
+		<footer class="reg_foot">
+			2016@百度
+		</footer>
+	</body>
+	
+</html>

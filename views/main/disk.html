@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>微云首页</title>
+    <style>
+        #fileList {
+            line-height: 28px;
+        }
+        #fileList .folder {
+            color: blue;
+        }
+
+        #fileList li a {
+            font-size: 12px;
+            color: #000;
+            cursor: pointer;
+            margin-left: 10px;
+            display: none;
+        }
+        #fileList li:hover a {
+            display: inline-block;
+        }
+
+        #crumbs a {
+            margin-left: 10px;
+        }
+    </style>
+    <script src="/public/js/jquery.min.js"></script>
+</head>
+<body>
+    <h1>微云网盘</h1>
+    <a href="/user/logout">退出</a>
+
+    <hr>
+    <button id="btnCreateFolder">新建文件夹</button>
+    <hr>
+
+    <div id="crumbsList">
+        <a href="javascript:;" class="backWeiYun">微云</a>
+        <span id="crumbs"></span>
+    </div>
+
+    <ul id="fileList"></ul>
+
+
+    <script>
+
+        var pid = '';
+
+        getList();
+
+        //新建文件夹
+        $('#btnCreateFolder').on('click', function() {
+
+            var name = prompt('请输入要新建的文件夹的名称');
+
+            if (name == '') {
+                alert('请输入名称');
+            } else {
+                $.ajax({
+                    type: 'post',
+                    url : '/api/createFolder',
+                    data: {
+                        pid: pid,
+                        name: name
+                    },
+                    dataType: 'json',
+                    success: function(result) {
+                        if (result.code) {
+                            alert(result.message);
+                        } else {
+                            getList();
+                        }
+                    }
+                })
+            }
+
+        });
+
+        //返回微云
+        $('#crumbsList .backWeiYun').on('click', function() {
+            pid = null;
+            getList();
+        })
+
+        //获取所有的文件夹信息
+        function getList() {
+            $('#fileList').html('');
+
+            //面包屑
+            $.ajax({
+                url: '/api/crumbs',
+                data: {
+                    id: pid
+                },
+                dataType: 'json',
+                success: function(result) {
+                    $('#crumbs').html('');
+                    for (var i=0; i<result.data.length; i++) {
+                        $('<a>').attr('href', 'javascript:;').html(result.data[i].name).appendTo($('#crumbs')).attr('_id', result.data[i]._id).on('click', function() {
+                            pid = $(this).attr('_id');
+                            getList();
+                        });
+                    }
+                }
+            });
+
+            $.ajax({
+                url: '/api/getList',
+                data: {
+                    pid: pid
+                },
+                dataType: 'json',
+                success: function(result) {
+
+                    for (var i=0; i<result.data.length; i++) {
+
+                        var $li = $('<li>').html( result.data[i].name).attr('_id', result.data[i]._id).attr('_name', result.data[i].name);
+                        if (result.data[i].type) {
+                            $li.addClass('folder');
+                        }
+
+                        //重命名
+                        $renameBtn = $('<a>').html('重命名').appendTo($li);
+                        $renameBtn.on('click', function() {
+                            var name = prompt('请输入要新建的文件夹的名称', $(this).parent().attr('_name'));
+
+                            if (name == '') {
+                                alert('请输入名称');
+                            } else {
+                                $.ajax({
+                                    url : '/api/rename',
+                                    data: {
+                                        id: $(this).parent().attr('_id'),
+                                        name: name
+                                    },
+                                    dataType: 'json',
+                                    success: function(result) {
+                                        if (result.code) {
+                                            alert(result.message);
+                                        } else {
+                                            getList();
+                                        }
+                                    }
+                                })
+                            }
+                        })
+
+                        $li.on('dblclick', function() {
+                            pid = $(this).attr('_id');
+                            getList();
+                        })
+
+                        $li.appendTo( $('#fileList') );
+
+                    }
+
+
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>

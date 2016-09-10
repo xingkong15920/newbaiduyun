@@ -1,0 +1,33 @@
+/*reset*/
+body,h1,h3,h6,p{
+	margin:0;
+	padding:0;
+}
+ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+img{
+	vertical-align:top;
+	border:none;
+}
+a{
+	text-decoration:none;
+}
+input{
+	margin:0;
+	padding:0;
+}
+/*浮动class*/
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.clearfix:after{
+	content:"";
+	display:block;
+	clear:both;
+}

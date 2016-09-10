@@ -1,0 +1,400 @@
+/*主页雪碧图*/
+.index_bg{
+	background:url(../img/frame-icon.png);
+	background-repeat : no-repeat;
+}
+/*登陆雪碧图*/
+.login_bg{
+	background:url(../img/sprite_1.png);
+	background-repeat : no-repeat;
+}
+/*网盘分类雪碧图*/
+.list_box_bg{
+	background:url(../img/dropdown_menu.png);
+	background-repeat : no-repeat;
+}
+/*foot_bg*/
+.foot_bg{
+	background:url(../img/sprite.png);
+	background-repeat : no-repeat;
+}
+/*头部head*/
+.index_head{
+	width:100%;
+	height:49px;
+	background-color:#252525;
+	cursor:pointer;
+}
+/*h1大标题设置*/
+.index_title{
+	width:148px;
+	height:50px;
+	text-indent:-9999px;
+	margin-left:10px;
+	background-position:0px 6px;
+}
+/*左边导航*/
+.nav_left li{
+	float:left;
+	height:100%;
+	width:90px;
+	font:bold 18px/49px "微软雅黑";
+	color:white;
+	text-align:center;
+	cursor: pointer;
+}
+/*左边导航hover*/
+.nav_left li:hover{
+	background-color:#0f0f0f;
+}
+/*网盘span标签*/
+.list_item{
+	width:12px;
+	height:6px;
+	display:inline-block;
+	margin-bottom:5px;
+	background-position: -89px -48px;
+}
+/*网盘的hover*/
+.nav_left .navlift_li:hover{
+	background-color:white;
+	color:black;
+	border-bottom:1px solid white;
+}
+/*网盘haover时span的背景变化*/
+.nav_left .navlift_li:hover .list_item{
+	background-position: -89px -59px;
+}
+.navlift_li{
+	position:relative;
+}
+/*网盘分类盒子*/
+#index_list_box{
+	position:absolute;
+	left:-67px;
+	top:49px;
+	width:600px;
+	height:100px;
+	background-color:white;
+	border:1px solid black;
+	border-top:none;
+	z-index:10;
+	display:none;
+}
+#index_list_box li:hover{
+	background-color:#252525;
+}
+.index_list_item{
+	width:35px;
+	height:35px;
+	display:block;
+	background-position:-10px -10px;
+}
+/*head右边导航*/
+.nav_right li{
+	float:left;
+}
+/*超级会员链接*/
+.right_sup{
+	font:12px/49px "微软雅黑";
+	color:#d1680d;
+	padding-right:11px;
+}
+.right_sup:hover{
+	text-decoration:underline;
+}
+/*会员中心*/
+.right_user{
+	width:70px;
+	height:26px;
+	background-color:#ec2917;
+	color:#cee5d5;
+	font:12px/26px "微软雅黑";
+	text-align:center;
+	margin:12px 20px 0 0 ;
+}
+.right_user:hover{
+	color:white;
+}
+/*客户端下载*/
+.right_down{
+	font:12px/49px "微软雅黑";
+	padding-right:20px;
+	color:white;
+}
+.right_down:hover{
+	text-decoration:underline;
+}
+/*更多more*/
+.right_more{
+	font:12px/49px "微软雅黑";
+	color:white;
+	padding-right:11px;
+}
+.right_more_ico{
+	width:12px;
+	height:12px;
+	background-position:-89px -45px;
+	display:inline-block;
+	margin-top:3px;
+}
+/*主体内容部分*/
+/*背景图大盒子*/
+.cont_bg{
+	width: 100%;
+	position:relative;
+}
+.cont_bg_top img,.cont_bg_bottom img{
+	width:100%;
+}
+/*gif一*/
+.cont_bg_ico_1{
+    width: 264px;
+    height: 49px;
+    position:absolute;
+    left: 300px;
+    top: 110px
+}
+/*gif二*/
+.cont_bg_ico_2{
+    width: 84.3125px;
+    height: 91.3385px;
+    position:absolute;
+    left: 720px;
+    top: 233px;
+}
+/*登陆框部分*/
+.index_login{
+	width:340px;
+	height:300px;
+	border:1px solid black;
+	padding:42px 30px 0 30px;
+	background-color:white;
+	position:absolute;
+	right:66px;
+	top:74px;
+	box-shadow: 0px 0px 10px 8px #9b9b9b;
+}
+/*登陆百度账号及切换手机号*/
+.login_title{
+	font:20px/28px "微软雅黑";
+}
+.login_title span{
+	width:25px;
+	height:25px;
+	margin-right:6px;
+	background:url(../img/yun_login_logo.png) no-repeat;
+}
+.login_title a{
+	font:12px/34px "微软雅黑";
+	color:#2266d1;
+}
+/*账号密码框*/
+.login_box{
+	width:338px;
+	height:118px;
+	margin-top:27px;
+	border:1px solid black;
+}
+/*账号密码一栏*/
+.login_user,.login_pass{
+	width:338px;
+	height:62px;
+	position:relative;
+}
+.login_user label,.login_pass label{
+	width:18px;
+	height:18px;
+	position:absolute;
+	left:22px;
+	top:18px;
+	background-position: 0 -460px;
+}
+.login_user input,.login_pass input{
+	width:277px;
+	margin-left:15px;
+    padding: 20px 0;
+    padding-left: 35px;
+    border:none;
+    outline:none;
+    font-size: 14px;
+    border-bottom:1px solid black;
+}
+#index_message{
+}
+/*登陆密码输入框改一下*/
+.login_pass label{
+	background-position: -35px -460px;
+}
+/*登陆框提交按钮*/
+.login_submit{
+	width:340px;
+	height:52px;
+	text-indent:-9999px;
+	border:none;
+	margin-top:30px;
+	background-position:0 -52px;
+	cursor:pointer;
+}
+.login_submit:hover{
+	background-position:0 0;
+}
+/*注册账号*/
+.index_register{
+	width:406px;
+	height:77px;
+	position:absolute;
+	left:0;
+	top:342px;
+	background-position:0 -265px;
+	text-indent:-9999px;
+}
+.index_register:hover{
+	background-position:0 -188px;
+}
+/*请继续按钮*/
+.index_go{
+	width:72px;
+	height:41px;
+	position:absolute;
+	left:50%;
+	top:568px;
+	background-position:-442px -117px;
+	text-indent:-9999px;
+	cursor:pointer;
+}
+.index_go:hover{
+	background-position:-442px -158px;
+}
+/*分享达人*/
+.cont_bot{
+	width: 100%;
+	margin-top:-20px;
+	background-color:#e3e4e6;
+	height:300px;
+}
+/*分享达人标题*/
+.index_share h3{
+	width:1000px;
+	height:105px;
+	background-position: 0 -240px;
+	background-repeat:repeat-x;
+	margin:0 auto;
+	text-indent:-9999px;
+	position:relative;
+}
+.index_share a{
+	width:165px;
+	height:65px;
+	position:absolute;
+	left:407px;
+	top:20px;
+	display:inline-block;
+	background-position:0 -100px;
+}
+.index_share a:hover{
+	background-position:0 -166px;
+}
+/*分享列表*/
+.cont_bot_list{
+	width: 1000px;
+	margin:0 auto;
+}
+/*列表下的li*/
+.bot_list_item{
+	float:left;
+	width:205px;
+	padding: 15px 0 15px 36px;
+}
+/*li下的头像，标题及简介*/
+.item_ico{
+	width:43px;
+	float:left;
+	margin-right:10px;
+}
+.item_ico img{
+	width:100%;
+}
+.item_title{
+	float:left;
+	font:14px/16px "微软雅黑";
+}
+.item_title a{
+	color:#2b2a26;
+}
+.item_show{
+	float:left;
+	font:12px/24px "微软雅黑";
+	color:#737e82;
+}
+/*底部客户端支持列表*/
+.down_wrapper{
+	width:100%;
+	height:109px;
+	background-color:#e9eaeb;
+}
+/*列表盒子*/
+.wrapper_item{
+	width:1000px;
+	padding:30px 0;
+	margin:0 auto;
+}
+.wrapper_item a{
+	width:15%;
+	float:left;
+    height: 49px;
+    text-indent: -9999px;
+    background-image:url(../img/sprite.png);
+    background-repeat:no-repeat;
+    margin-left:10px;
+}
+/*列表各个背景图*/
+.wrapper_item a:nth-of-type(1){
+	background-position:20px 0;
+}
+.wrapper_item a:nth-of-type(2){
+	background-position:-157px 0;
+}
+.wrapper_item a:nth-of-type(3){
+	background-position:-328px 0;
+}
+.wrapper_item a:nth-of-type(4){
+	background-position:-494px 0;
+}
+.wrapper_item a:nth-of-type(5){
+	background-position:-662px 0;
+}
+.wrapper_item a:nth-of-type(6){
+	background-position:-823px 0;
+}
+/*列表各个背景图hover*/
+.wrapper_item a:nth-of-type(1):hover{
+	background-position:20px -49px;
+}
+.wrapper_item a:nth-of-type(2):hover{
+	background-position:-157px -49px;
+}
+.wrapper_item a:nth-of-type(3):hover{
+	background-position:-328px -49px;
+}
+.wrapper_item a:nth-of-type(4):hover{
+	background-position:-494px -49px;
+}
+.wrapper_item a:nth-of-type(5):hover{
+	background-position:-662px -49px;
+}
+.wrapper_item a:nth-of-type(6):hover{
+	background-position:-823px -49px;
+}
+/*foot*/
+.foot{
+	width:100%;
+    padding: 30px 0;
+    background: #242424;
+    text-align: center;
+    font: 12px/1.5 arial,simsun;
+}
+.foot a{
+    color: #6D6D6D;
+    font: 12px/1.5 arial,simsun;
+}

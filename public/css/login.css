@@ -1,0 +1,100 @@
+/*注册页面*/
+/*主页头部*/
+.login_head{
+	width:100%;
+}
+/*头部中间div*/
+.login_head_mid{
+	width:980px;
+	height:75px;
+	margin:0 auto;
+}
+/*头部左边logo*/
+.login_head_mid h1{
+	width:330px;
+	height:76px;
+	background:url(../img/logo.png) right no-repeat;
+	cursor:pointer;
+}
+.login_head_mid a{
+	margin-top:15px;
+	display:inline-block;
+}
+/*头部右边*/
+.login_go{
+	height:60px;
+	margin-top:15px;
+	font: 12px/50px Arial,"宋体";
+}
+.login_go input{
+	font-weight: 700;
+    color: #666;
+    height: 32px;
+    width: 64px;
+    border: 0;
+    background: url(../img/reg_icons.png) no-repeat 0 -48px;
+    cursor:pointer;
+}
+/*导航线*/
+.nav_line{
+	width: 100%;
+}
+.nav_line_mid{
+	height:20px;
+	background:url(../img/reg_hr.png) no-repeat ;
+}
+/*注册框*/
+.reg_big{
+	width: 100%;
+	margin-bottom:100px;
+}
+.reg_big span{
+	line-height:38px;
+}
+.reg_box{
+	width:980px;
+	margin:15px auto 0;
+}
+.reg_box_item{
+	width:100%;
+	padding-left:40px;
+	margin:20px 0 ;
+}
+.reg_box_item label{
+    float: left;
+    height: 42px;
+    width: 65px;
+    margin-right: 10px;
+    line-height: 42px;
+    font-size: 14px;
+    color: #666;
+    font-weight: 700;
+    text-align: right;
+}
+.reg_box_item input{
+    display: block;
+    position: relative;
+    float: left;
+    height: 16px;
+    width: 328px;
+    padding: 11px 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    color: #666;
+}
+/*注册提交框*/
+#reg_sub{
+	margin-left:76px;
+	width:350px;
+	height:50px;
+	text-align:center;
+	cursor:pointer;
+	background-color:#408aed;
+	color:white;
+}
+/*底部*/
+.reg_foot{
+	font:14px/30px "微软雅黑";
+	text-align:center;
+}
